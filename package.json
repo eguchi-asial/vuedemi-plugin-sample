@@ -1,0 +1,21 @@
+{
+  "name": "sample_plugin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "vite": "^3.1.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "typescript": "~4.7.4",
+    "@vue/tsconfig": "^0.1.3"
+  }
+}
