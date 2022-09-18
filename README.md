@@ -19,7 +19,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ```main.js
 
 import App from './App.vue'
-import * as Components from 'my-component/dist/my_component.mjs'
+import * as Components from 'my-component'
 const app = createApp(App)
 Object.keys(Components).forEach(componentName => {
   if (componentName.startsWith('My')) {
