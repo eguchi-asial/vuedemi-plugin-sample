@@ -1,38 +1,23 @@
-import { defineComponent as l, ref as p, openBlock as i, createElementBlock as m, Fragment as u, createElementVNode as c, toDisplayString as r, createTextVNode as g } from "vue";
-const f = /* @__PURE__ */ g(" hogehoge "), d = { class: "card" }, a = /* @__PURE__ */ l({
+import { defineComponent as s, ref as c, openBlock as l, createElementBlock as i, Fragment as u, createElementVNode as e, toDisplayString as n, createTextVNode as a } from "vue";
+const m = /* @__PURE__ */ a(" hogehoge "), g = { class: "card" }, p = /* @__PURE__ */ s({
   __name: "Hoge",
   props: {
     msg: String
   },
-  setup(o) {
-    const e = p(0);
-    return (n, t) => (i(), m(u, null, [
-      f,
-      c("h1", null, r(o.msg), 1),
-      c("div", d, [
-        c("button", {
+  setup(r) {
+    const t = c(0);
+    return (_, o) => (l(), i(u, null, [
+      m,
+      e("h1", null, n(r.msg), 1),
+      e("div", g, [
+        e("button", {
           type: "button",
-          onClick: t[0] || (t[0] = (s) => e.value++)
-        }, "count is " + r(e.value), 1)
+          onClick: o[0] || (o[0] = (d) => t.value++)
+        }, "count is " + n(t.value), 1)
       ])
     ], 64));
   }
-}), y = a, _ = { Hoge: a }, h = (o) => {
-  let e = "", n = !1;
-  for (const t of o) {
-    const s = t.toUpperCase() === t;
-    s && n && (e += "-"), e += t, n = !s;
-  }
-  return e.replace(/-+/g, "-").toLowerCase();
-}, C = {
-  install(o) {
-    Object.entries(_).forEach(([e, n]) => {
-      const t = h(e);
-      o.component(`my-${t}`, n);
-    });
-  }
-};
+}), h = p;
 export {
-  y as MyHoge,
-  C as default
+  h as MyHoge
 };

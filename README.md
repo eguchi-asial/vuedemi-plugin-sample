@@ -5,3 +5,29 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+## 使い方
+
+package.jsonのdevDeendenciesに以下
+
+```package.json
+"my-component": "git@github.com:eguchi-asial/vuedemi-plugin-sample.git#main"
+```
+
+src/main.jsに以下
+
+```main.js
+
+import App from './App.vue'
+import * as Components from 'my-component/dist/my_component.mjs'
+const app = createApp(App)
+Object.keys(Components).forEach(componentName => {
+  if (componentName.startsWith('My')) {
+    app.component(componentName, Components[componentName])
+  }
+})
+app.mount('#app')
+
+```
+
+Vue2までなら、install funcをexport dfaultして、App.useすればlibrary側のinstallが呼ばれて自動登録されたのだが、なぜかVue3のapp.useでinstallが呼ばれないため、上記にしている
