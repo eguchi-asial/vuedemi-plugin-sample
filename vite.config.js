@@ -14,7 +14,7 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     assetsDir: path.join(__dirname, 'src/assets/'),
     lib: {
-      name: 'nr-vue3-component',
+      name: 'my-component',
       entry: resolve(__dirname, 'src/index.ts')
     }
   },
