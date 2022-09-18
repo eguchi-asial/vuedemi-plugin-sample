@@ -16,6 +16,14 @@ export default defineConfig({
     lib: {
       name: 'my-component',
       entry: resolve(__dirname, 'src/index.ts')
+    },
+    rollupOptions: {
+      external: "vue",
+      output: {
+        globals: {
+          vue: "Vue",
+        }
+      }
     }
   },
   resolve: {
